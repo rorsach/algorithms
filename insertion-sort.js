@@ -16,7 +16,6 @@ var insertionSort = function (array) {
 
 var randomizedArray = [3, 1, 4, 2, 5];
 
-
 console.log(randomizedArray.toString());
 insertionSort(randomizedArray);
 console.log(randomizedArray.toString());
