@@ -5,10 +5,12 @@ The implementations can be run in the browser or in node. They're not namespaced
 
 Use at your own risk.
 
-* Insertion Sort
-* Merge Sort
+## Sorting
 
-  Example Merge Sort step by step output:
+* Insertion sort
+* Merge sort
+
+  Example Merge sort step by step output:
 
 	  [5, 2, 4, 1, 6, 3, 7, 0]
 	  [2, 5, 4, 1, 6, 3, 7, 0]
@@ -19,7 +21,7 @@ Use at your own risk.
 	  [1, 2, 4, 5, 0, 3, 6, 7]
 	  [0, 1, 2, 3, 4, 5, 6, 7]
 
-  Possible Improvements:
+  Possible improvements:
 
   * Don't recreate the auxiliary output array on each call of merge.
   * Make use of slice to simplify the logic that keeps track of indices.
