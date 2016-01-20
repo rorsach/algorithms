@@ -23,4 +23,3 @@ Use at your own risk.
 
   * Don't recreate the auxiliary output array on each call of merge.
   * Make use of slice to simplify the logic that keeps track of indices.
-
