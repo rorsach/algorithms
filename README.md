@@ -12,7 +12,6 @@ Use at your own risk.
 * Merge sort
   * [Source](https://github.com/rorsach/algorithms/blob/master/merge-sort.js)
   * [Documentation](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec03.pdf) (MIT OpenCourseWare)
-   
   * Example Merge sort step by step output:
 
 		1. [5, 2, 4, 1, 6, 3, 7, 0]
