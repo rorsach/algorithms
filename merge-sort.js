@@ -1,5 +1,6 @@
 /*global mergeSort*/
 var mergeSort = (function() {
+    "use strict";
     var mergeSort = function mergeSort(array, low, high) {
         var middle;
 

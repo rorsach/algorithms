@@ -1,4 +1,9 @@
+/**
+ * Insertion Sort 
+ * @param array The array will be sorted in-place
+ */
 var insertionSort = function (array) {
+    "use strict";
     var i;
     var j;
     var key;
