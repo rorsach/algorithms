@@ -9,24 +9,23 @@ var mergeSort = (function() {
     var mergeSort = function mergeSort(array, low, high) {
         var middle;
 
-        // specify the defaults for the initial call
+        // Specify the defaults for the initial call.
         low = low || 0;
         high = high || array.length;
 
-        // at this level of granularity the array is de facto sorted
+        // At this level of granularity the array is de-facto sorted.
         if (high - low < 2) {
             return;
         }
 
-        // it is still possible to split the array smaller. Find the middle.
+        // It is still possible to split the array smaller. Find the middle.
         middle = Math.floor((high - low) / 2) + low;
 
-        // recursively split each half
+        // Recursively split each half.
         mergeSort(array, low, middle);
         mergeSort(array, middle, high);
 
-        // once we reach the smallest level of granularity, the recursive calls start hitting the return statement above.
-        // we can now merge the pairs together
+        // Once we reach the smallest level of granularity, the recursive calls hit the return statement above.
         merge(array, low, middle, high);
     };
 
@@ -36,7 +35,7 @@ var mergeSort = (function() {
         var k = low;
         var output = []; 
 
-        // compare and merge into output array
+        // Compare and merge slices into output array.
         while (i < middle && j < high) {
             if (array[i] < array[j]) {
                 output[k] = array[i];
@@ -48,25 +47,28 @@ var mergeSort = (function() {
 
             k++;
         }
-        // arrays slices are of uneven lengths - pack the remaining numbers in
+        
+        // Array slices are of uneven lengths - append the remaining numbers to output.
         while (i < middle) {
             output[k] = array[i];
             k++;
             i++;
         }
 
-        // arrays slices are of uneven lengths - pack the remaining numbers in
+        // Array slices are of uneven lengths - append the remaining numbers to output.
         while (j < high) {
             output[k] = array[j];
             k++;
             j++;
         }
 
-        // update original array with sorted elements
+        // Update original array with sorted elements.
         for (i = low; i < k; i++) {
             array[i] = output[i];
         }
-        console.log(array);
+
+        // For educational purposes, print out each merge step.
+        console.log(array); 
     };
 
     return mergeSort;
