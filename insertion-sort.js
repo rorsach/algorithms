@@ -1,6 +1,6 @@
 /**
  * Insertion Sort 
- * @param array The array will be sorted in-place
+ * @param {Number[]} array - The array will be sorted in-place
  */
 var insertionSort = function (array) {
     "use strict";

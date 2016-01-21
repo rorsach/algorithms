@@ -2,7 +2,7 @@
 
 /**
  * Merge Sort
- * @param {int[]} array - The array to sort. array is overwritten with sorted elements  
+ * @param {Number[]} array - The array to sort. array is overwritten with sorted elements  
  */
 var mergeSort = (function() {
     "use strict";
