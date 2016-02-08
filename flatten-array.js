@@ -1,7 +1,14 @@
+/**
+ * Flatten an array iteratively.
+ * @param {} array
+ * @returns {} New array with nested arrays from the input flattened.
+ */
 function flattenIterative(array) {
     'use strict';
     var result = [];
+    // When iteratiing through a nested array it is necessary to store the context of the parent array to be able to return there.
     var context = [];
+    var item;
 
     // Handle invalid input.
     if (!array || !Array.isArray(array)) {
@@ -9,7 +16,7 @@ function flattenIterative(array) {
     }
     
     while (array && array.length > 0) {
-        var item = array.pop();
+        item = array.pop();
         
         if (Array.isArray(item)) {
 
@@ -35,10 +42,16 @@ function flattenIterative(array) {
 
     // Because we use pop to process the arrays, the result is reversed.
     // pop() is a much faster operation than unshift().
+    // TODO: performance comparison of alternatives.
     return result.reverse();
 }
 
 
+/**
+ * Flatten an array recursively.
+ * @param {} array Array that may contained nested array structures.
+ * @returns {} New array with nested arrays from the input flattened.
+ */
 function flattenRecursive(array) {
     'use strict';
     var result = [];
