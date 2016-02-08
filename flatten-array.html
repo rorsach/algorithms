@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Flatten Deeply Nested Array</title>
+	</head>
+	<body>
+		<h1>Flatten Deeply Nested Array</h1>
+		<p>Given the following input, produce the output shown:</p>
+        <pre>
+            <code>
+                // Input
+                []
+                [1, {obj: [3, 4]}, ['a', ['b', 'c']], [['d'], 'e', 'f'], 'g']
+                [[]]
+                [[],[]]
+                [[[[1, [[2, [[[[3, [[]]]]]]]]]]]]
+                [[[[1, [[2, [[[[undefined, [[]]]]]]]]]]]]
+            </code>
+        </pre>
+        <pre>
+            <code>
+                // Output
+                []
+                [1, Object, "a", "b", "c", "d", "e", "f", "g"]
+                []
+                []
+                [1, 2, 3]
+                [1, 2, undefined]
+            </code>
+        </pre>
+
+		<script src="flatten-array.js"></script>
+	</body>
+</html>
