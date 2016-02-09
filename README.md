@@ -29,6 +29,8 @@ Use at your own risk.
      * Make use of slice to simplify the logic that keeps track of indices.
      * Combine with insertion sort at a given level of granularity - apparently this can give a little speed boost.
 
+## Miscellaneous
+
 * JS Flatten Array
   * [Source](https://github.com/rorsach/algorithms/blob/master/flatten-array.js)
   * Flattens nested arrays leaving objects untouched.
