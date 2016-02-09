@@ -30,6 +30,7 @@ Use at your own risk.
      * Combine with insertion sort at a given level of granularity - apparently this can give a little speed boost.
 
 * JS Flatten Array
+  * [Source](https://github.com/rorsach/algorithms/blob/master/flatten-array.js)
   * Flattens nested arrays leaving objects untouched.
 
              // This:    [1, {key:value}, [3, 4, [5, 6]]]
