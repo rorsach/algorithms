@@ -32,6 +32,7 @@ Use at your own risk.
 * JS Flatten Array
   * [Source](https://github.com/rorsach/algorithms/blob/master/flatten-array.js)
   * Flattens nested arrays leaving objects untouched.
+  * Summary of what it does:
 
              // This:    [1, {key:value}, [3, 4, [5, 6]]]
 			 // Becomes: [1, {key:value}, 3, 4, 5, 6]
