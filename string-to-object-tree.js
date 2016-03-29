@@ -42,3 +42,32 @@ function arrayToObject(names, obj, value) {
 
     return obj;
 }
+
+function getFormInputs(formId) {
+    var namespaces = [];
+    var values = [];
+    // Simplistic method to collect all input fields of a form, assumes they are all text input fields.
+    var inputs = document.getElementById(formId).getElementsByTagName('input'); 
+
+    for (var i = 0; i < inputs.length; i++) {
+        namespaces.push(inputs[i].getAttribute('name'));
+        values.push(inputs[i].value);
+    }
+
+    return {
+        namespaces: namespaces,
+        values: values
+    };
+}
+
+function main() {
+    var data = getFormInputs('plants');
+    var obj = {};
+    for (var i = 0; i < data.namespaces.length; i++) {
+        stringToObjectTree(data.namespaces[i], obj, data.values[i]);
+    }
+    console.log(obj);
+    return obj;
+}
+
+main();

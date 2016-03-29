@@ -2,10 +2,22 @@
 <html>
 	<head>
 		<title>String to Object Tree</title>
+        <style>
+            body, html {
+                font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+            }
+        </style>
 	</head>
 	<body>
 		<h1>String to Object Tree</h1>
 		<p>Construct an Object hierarchy from dot delimited strings.</p>
+        <p>View the console to see the output of the program</p>
+        <form id="plants">
+            <input type="text" value="Earl Grey" name="plants.edible.tea" />
+            <input type="text" value="Fly Agaric" name="plants.inedible.mushrooms" />
+            <input type="text" value="Button" name="mushrooms" />
+            <input type="text" value="" name="plants.roasted" />
+        </form>
 		<script src="string-to-object-tree.js"></script>
 	</body>
 </html>
