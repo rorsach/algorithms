@@ -38,3 +38,19 @@ Use at your own risk.
 
              // This:    [1, {key:value}, [3, 4, [5, 6]]]
 			 // Becomes: [1, {key:value}, 3, 4, 5, 6]
+
+* Build Object Tree from a set of strings and values.
+  * [Source](https://github.com/rorsach/algorithms/blob/master/string-to-object-tree.js)
+  * Summary:
+
+             // Turn this
+             ["a.b.c"] and [100]
+
+             // Into this
+             {
+			   a: {
+			     b: {
+			       c: 100
+			     }
+			   }
+		     }
