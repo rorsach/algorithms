@@ -4,28 +4,34 @@
  * @returns {Number} The maximum profit (or least loss) for the range of prices given. 
  */
 function maximumProfit(prices) {
-    var profit = Number.NEGATIVE_INFINITY;
-    var maxProfit = Number.NEGATIVE_INFINITY;
-    var lowestPrice = Number.POSITIVE_INFINITY;
+    if (prices.length < 2) {
+        console.log("Insufficient prices for a buy and sell action");
+    }
+    var profit;
+    var maxProfit = prices[1] - prices[0];
+    var lowestPrice = prices[0];
     var price;
     
-    for (var i = 0; i < prices.length; i++) {
+    for (var i = 1; i < prices.length; i++) {
         price = prices[i];
+
+        profit = price - lowestPrice;
+        
+        if (profit > maxProfit) {
+            maxProfit = profit;
+        }
 
         if (lowestPrice > price) {
             lowestPrice = price;
-        } else {
-            profit = price - lowestPrice;
-            
-            if (profit > maxProfit) {
-                maxProfit = profit;
-            }
         }
+
     }
     
     return maxProfit;
 }
 
 var prices = [10, 10, 2, 4, 99, 1, 1];
+
+prices = [15, 10, 5, 1];
 
 console.log(maximumProfit(prices));
