@@ -31,6 +31,36 @@ Use at your own risk.
 
 ## Miscellaneous
 
+* Trie aka prefix tree:
+  * [Source](https://github.com/rorsach/algorithms/blob/master/Trie.js)
+  * Given an input set such as: 
+  
+     ``` JavaScript
+     [
+               'peter',
+               'piper',
+               'picked',
+               'a',
+               'peck',
+               'of',
+               'pickled',
+               'peppers',
+               'she',
+               'sells',
+               'seashells',
+               'by',
+               'the',
+               'sea',
+               'shore'
+     ]
+     ```
+     
+    and a query such as trie.findSuffixes('pi'), return a list of valid words stored in the Trie.
+     
+     ```
+     FindSuffixes for pi: [ 'piper', 'picked', 'pickled' ]
+     ```
+     
 * JS Flatten Array
   * [Source](https://github.com/rorsach/algorithms/blob/master/flatten-array.js)
   * Flattens nested arrays leaving objects untouched.
@@ -39,12 +69,12 @@ Use at your own risk.
              // This:    [1, {key:value}, [3, 4, [5, 6]]]
 			 // Becomes: [1, {key:value}, 3, 4, 5, 6]
 
-* Build Object Tree from a set of strings and values.
+* Build Object Tree from a set of strings and corresponding values.
   * [Source](https://github.com/rorsach/algorithms/blob/master/string-to-object-tree.js)
   * Summary:
 
              // Turn this
-             ["a.b.c"] and [100]
+             "a.b.c" and 100
 
              // Into this
              {
