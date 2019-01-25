@@ -23,7 +23,7 @@ class Trie {
         }
     }
 
-    // Test if prefix is present in Trie
+    // Test if prefix is present in Trie. This is a private method of the class, use hasWord to check presence of  a specific word.
     search (prefix) {
         if (prefix.length < 1) {
             return
@@ -45,7 +45,10 @@ class Trie {
         return node
     }
 
-    hasWord (word) {}
+    hasWord (word) {
+        let result = this.search(word)
+        return result ? result.isWord : false
+    }
 
     // Find all known complete words for the current prefix.
     findSuffixes (word) {
@@ -117,10 +120,10 @@ for (let i = 0; i < wordList.length; i++) {
 
 console.log(trie.toString())
 
-console.log('Search for peck:', trie.search('peck'))
-console.log('Search for pickled:', trie.search('pickled'))
-console.log('Search for pickle:', trie.search('pickle'))
-console.log('Search for dog:', trie.search('dog'))
+console.log('Search for peck:', trie.hasWord('peck'))
+console.log('Search for pickled:', trie.hasWord('pickled'))
+console.log('Search for pickle:', trie.hasWord('pickle'))
+console.log('Search for dog:', trie.hasWord('dog'))
 
 console.log('FindSuffixes for pickle:', trie.findSuffixes('pickle'))
 console.log('FindSuffixes for pi:', trie.findSuffixes('pi'))
